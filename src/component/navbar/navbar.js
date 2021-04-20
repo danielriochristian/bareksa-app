@@ -21,7 +21,7 @@ export default function Navbar() {
                 {isSmall ? (
                     ''
                 ) : (
-                    <Grid item xs={2} className="center">
+                    <Grid item xs={3} className="center">
                         <Avatar className="avatar">RH</Avatar>
                         <div className="initial">
                             <Typography variant="subtitle2" style={{ fontWeight: 700, fontSize: '16px' }}>
@@ -35,7 +35,7 @@ export default function Navbar() {
                     </Grid>
                 )}
 
-                <Grid item xs={4}></Grid>
+                <Grid item xs={3}></Grid>
                 {isSmall ? (
                     <Grid container item xs={6} className="center" justify="flex-end">
                         <Badge badgeContent={4} className="center" variant="dot" color="error" style={{ marginLeft: '34px', cursor: 'pointer' }}>

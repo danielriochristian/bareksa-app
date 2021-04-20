@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, useMediaQuery, useTheme } from '@material-ui/core';
+import { Card } from '@material-ui/core';
 import { DateRange } from 'react-date-range';
 import { Grid } from '@material-ui/core';
 import 'react-date-range/dist/styles.css';
@@ -15,9 +15,6 @@ export default function Users() {
         }
     ]);
 
-    const theme = useTheme();
-    const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
-
     return (
         <Card className="card" variant="outlined" style={{ height: '380px' }}>
             <DateRange
@@ -29,9 +26,11 @@ export default function Users() {
                 color="#8772B0"
             />
 
-            <Grid container justify="center">
-                <Grid item xs={isSmall ? 11 : 8}>
+            <Grid container>
+                <Grid container item xs={6} justify="flex-end" alignItems="flex-end">
                     <button type="button" className="cancel"> Cancel </button>
+                </Grid>
+                <Grid item xs={6}>
                     <button type="button" className="filter"> Filter </button>
                 </Grid>
             </Grid>
