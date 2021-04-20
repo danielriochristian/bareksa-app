@@ -37,7 +37,7 @@ export default function Navbar() {
 
                 <Grid item xs={4}></Grid>
                 {isSmall ? (
-                    <Grid item xs={6} className="center" justify="flex-end">
+                    <Grid container item xs={6} className="center" justify="flex-end">
                         <Badge badgeContent={4} className="center" variant="dot" color="error" style={{ marginLeft: '34px', cursor: 'pointer' }}>
                             <NotificationsNoneOutlinedIcon />
                         </Badge>
@@ -46,7 +46,7 @@ export default function Navbar() {
                         </Badge>
                     </Grid>
                 ) : (
-                    <Grid item xs={4} className="center" justify="flex-end">
+                    <Grid container item xs={4} className="center" justify="flex-end">
                         <TextField
                             label="Search text"
                             variant="outlined"
